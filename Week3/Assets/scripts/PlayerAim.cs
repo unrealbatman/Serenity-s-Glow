@@ -18,6 +18,8 @@ public class PlayerAim : MonoBehaviour
 
     public int numberOfPoints;
 
+
+
     // Start is called before the first frame update
     void Start()
     {

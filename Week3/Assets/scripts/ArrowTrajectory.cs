@@ -15,9 +15,9 @@ public class ArrowTrajectory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        trackMovement();
+        TrackMovement();
     }
-    void trackMovement()
+    void TrackMovement()
     {
 
         Vector2 direction = rb.velocity;

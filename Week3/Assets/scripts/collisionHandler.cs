@@ -6,7 +6,8 @@ using UnityEngine.Rendering.Universal;
 public class collisionHandler : MonoBehaviour
 {
     public float smoothTime=0.5f;
-    public float targetIntensity = 5.0f; // The intensity you want to reach
+    public float targetIntensity = 2.0f; // The intensity you want to reach
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,14 +17,13 @@ public class collisionHandler : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Target"))
         {
-            Debug.Log("Target hit");
             Animator anim = collision.gameObject.GetComponentInChildren<Animator>();
             anim.SetTrigger("Fire");
-
-            SpriteRenderer rend = collision.gameObject.GetComponentInChildren(typeof(SpriteRenderer), true) as SpriteRenderer;
-           
-            Debug.Log(rend.name);            
+         
+            SpriteRenderer[] rend =collision.gameObject.GetComponentsInChildren<SpriteRenderer>();
+            rend[1].enabled = true;
             Light2D light2D = collision.gameObject.GetComponent<Light2D>();
+           
             StartCoroutine(IncreaseIntensityOverTime(light2D));
         }
     }
@@ -33,6 +33,7 @@ public class collisionHandler : MonoBehaviour
         if (collision.gameObject.CompareTag("Target"))
         {
             collision.GetComponent<PolygonCollider2D>().enabled = false;
+           
 
         }
 
