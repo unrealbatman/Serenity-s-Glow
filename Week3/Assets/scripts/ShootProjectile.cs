@@ -57,7 +57,7 @@ public class ShootProjectile : MonoBehaviour
     IEnumerator loadGameOver()
     {
         yield return new WaitForSecondsRealtime(3);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     
 }
