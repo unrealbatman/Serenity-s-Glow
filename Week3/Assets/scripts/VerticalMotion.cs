@@ -5,23 +5,25 @@ using UnityEngine;
 public class VerticalMotion : MonoBehaviour
 {
     public float moveSpeed;
+    public Vector3 upperBound;
+    public Vector3 lowerBound;
     private Rigidbody2D bow;
-    // Start is called before the first frame update
+
     void Start()
     {
         bow = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.W) && transform.position.y < upperBound.y)
         {
-            transform.position += Vector3.down * moveSpeed * Time.deltaTime;
+            this.transform.position += moveSpeed * Time.deltaTime * Vector3.up;
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+
+        if (Input.GetKey(KeyCode.S) && transform.position.y > lowerBound.y)
         {
-            transform.position += Vector3.up * moveSpeed * Time.deltaTime;
+            this.transform.position += moveSpeed * Time.deltaTime * Vector3.down;
         }
     }
 }
