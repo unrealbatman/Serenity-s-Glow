@@ -53,5 +53,12 @@ public class TargetTracker : MonoBehaviour
 
         this.gameObject.GetComponent<Light2D>().enabled = true;
 
+        GameObject[] water = GameObject.FindGameObjectsWithTag("Water");
+
+        for(int i =0; i < water.Length; i++)
+        {
+            water[i].SetActive(false);
+        }
+
     }
 }

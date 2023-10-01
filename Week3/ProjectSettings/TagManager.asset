@@ -8,6 +8,8 @@ TagManager:
   - Target
   - GlobalLight
   - AnimTarget
+  - Water
+  - Ammo
   layers:
   - Default
   - TransparentFX
