@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vector-fantasy-landscape-illustration_0: -3398665035519393579
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
