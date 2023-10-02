@@ -349,9 +349,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1880232382}
+  - {fileID: 2098659344}
   - {fileID: 670994137}
   - {fileID: 1495932726}
-  - {fileID: 2098659344}
+  - {fileID: 1413205652}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1140,7 +1141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1413205652
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1286,7 +1287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1495932726
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1425,7 +1426,7 @@ GameObject:
   - component: {fileID: 1880232384}
   - component: {fileID: 1880232383}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Image - Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1500,7 +1501,7 @@ GameObject:
   - component: {fileID: 2098659346}
   - component: {fileID: 2098659345}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (TMP) - Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
