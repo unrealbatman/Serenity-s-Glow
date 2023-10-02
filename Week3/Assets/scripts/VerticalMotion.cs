@@ -5,8 +5,8 @@ using UnityEngine;
 public class VerticalMotion : MonoBehaviour
 {
     public float moveSpeed;
-    public Vector3 upperBound;
-    public Vector3 lowerBound;
+    public float upperBound = 5.0f;
+    public float lowerBound = -5.0f;
     private Rigidbody2D bow;
 
     void Start()
@@ -14,14 +14,14 @@ public class VerticalMotion : MonoBehaviour
         bow = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.W) && transform.position.y < upperBound.y)
+        if (Input.GetKey(KeyCode.W) && transform.position.y < upperBound)
         {
             this.transform.position += moveSpeed * Time.deltaTime * Vector3.up;
         }
 
-        if (Input.GetKey(KeyCode.S) && transform.position.y > lowerBound.y)
+        if (Input.GetKey(KeyCode.S) && transform.position.y > lowerBound)
         {
             this.transform.position += moveSpeed * Time.deltaTime * Vector3.down;
         }
