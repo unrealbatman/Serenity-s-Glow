@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      calm-before-storm-f2_0: 9168536008004836875
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
